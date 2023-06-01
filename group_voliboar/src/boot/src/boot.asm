@@ -43,6 +43,10 @@ _start:
 	extern init_gdt
 	call init_gdt
 	
+	; Initialize Interrupt Descriptor Table
+    extern init_idt
+    call init_idt
+
 	; Call kernel_main()
 	extern kernel_main
 	call kernel_main
